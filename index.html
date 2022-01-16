@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visualizing Complex Functions with Three.js</title>
+    <style>
+        body {
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        #container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid transparent;
+        }
+
+        #title {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background: rgba(36, 36, 36, 0.69);
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="container"></div>
+    <div id="title">
+        <p>f(z) = z^(m/n)</p>
+        m =
+        <input type="number" id="m" name="m" min="-5" max="5" value="1">
+        <br>
+        n =
+        <input type="number" id="n" name="n" min="-5" max="5" value="2">
+        <br><button onclick="update()">update</button>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r81/build/three.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r81/examples/js/controls/OrbitControls.js"></script>
+
+<script src="js/lao.js"></script>
+
+</html>
